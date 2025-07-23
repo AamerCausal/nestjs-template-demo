@@ -3,9 +3,13 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
 
 # Environment variables
 .env
+.env.*
+!.env.example
+!env.example
 .env.local
 .env.development.local
 .env.test.local
@@ -15,6 +19,31 @@ yarn-error.log*
 dist/
 build/
 out/
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Cache directories
+.npm
+.cache/
+.parcel-cache
+.eslintcache
+.stylelintcache
 
 # OS generated files
 .DS_Store
@@ -32,26 +61,6 @@ Thumbs.db
 *.swo
 *~
 
-# Testing
-coverage/
-.nyc_output/
-
-# Logs
-logs/
-*.log
-
-# Runtime data
-pids/
-*.pid
-*.seed
-*.pid.lock
-
-# TypeScript cache
-*.tsbuildinfo
-
-# Optional npm cache directory
-.npm
-
 # Optional REPL history
 .node_repl_history
 
@@ -61,15 +70,12 @@ pids/
 # Yarn Integrity file
 .yarn-integrity
 
-# Next.js build output
+# Framework specific
 .next
-
-# Nuxt.js build output
 .nuxt
-
-# Gatsby files
-.cache/
-public
+.svelte-kit/
+.vuepress/dist
+.docusaurus
 
 # Serverless directories
 .serverless/
@@ -80,5 +86,12 @@ public
 # DynamoDB Local files
 .dynamodb/
 
+# Firebase cache directory
+.firebase/
+
 # TernJS port file
 .tern-port
+
+# Vite logs
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
